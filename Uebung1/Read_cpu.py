@@ -14,8 +14,7 @@ def UpdateCpustats(cpustatlist, cpuread):
         stats.newstat = float(cpuread[x+1])
 
 def Readcpu():
-    cpufilepfad1 = [r"C:\Users\Raphael\Desktop\UNI\Daten_2.5\Uebung1\t1.txt",r"C:\Users\Raphael\Desktop\UNI\Daten_2.5\Uebung1\t2.txt"]
-    cpufilepfad = cpufilepfad1[random.randint(0,1)]
+    cpufilepfad = r"/proc/stat"
     cpufile=open(cpufilepfad,"r")
     cpuread = cpufile.readlines(1)[0].split()
     cpufile.close()
@@ -44,7 +43,7 @@ while True:
     
     
     failsafe +=1
-    if failsafe == 5 :
+    if failsafe == 20 :
         break
     print("---------------------------------------------------")
     time.sleep(5)
