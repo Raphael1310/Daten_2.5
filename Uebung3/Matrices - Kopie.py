@@ -2,7 +2,7 @@
 import random
 import sys
 from timeit import default_timer as timer
-import multiprocessing
+import threading
 
 def multiply_matrices(matrix1, matrix2):
     if len(matrix1[0]) != len(matrix2):
@@ -33,12 +33,15 @@ def whole_calculation():
    
     
 
-class worker(multiprocessing.Process):
+class worker(threading.Thread):
     def __init__(self):
-        multiprocessing.Process.__init__(self)
+        threading.Thread.__init__(self)
+        
+
     def run(self):
         whole_calculation()
         print("test")
+         
 
 
 
@@ -46,15 +49,14 @@ start = timer()
 n_th=8
 th_l =[]
 counter =0
-print(len(multiprocessing.active_children()))
+#print(len(multiprocessing.active_children()))
 while counter<10:
-    if (len(multiprocessing.active_children()) -1) < n_th:
+    if (threading.activeCount() -1) < n_th:
         w=worker()
         th_l.append(w)
         w.start()
-        
         counter+=1
-        print("test1",th_l)
+        print("test1",len(th_l))
         
         
         
