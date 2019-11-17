@@ -1,0 +1,8 @@
+unset logscale x
+splot 'C:\Users\Köcki\Desktop\samelcountainer\uni\experimente\git\Ue5\Spektraltest_c.txt' using 1:2:3
+splot 'C:\Users\Köcki\Desktop\samelcountainer\uni\experimente\git\Ue5\Spektraltest_Randu.txt' using 1:2:3
+
+set logscale x 10
+plot 'C:\Users\Köcki\Desktop\samelcountainer\uni\experimente\git\Ue5\f_integral.txt' with linespoints
+unset logscale x
+plot 'C:\Users\Köcki\Desktop\samelcountainer\uni\experimente\git\Ue5\vol_integral.txt' with linespoints
