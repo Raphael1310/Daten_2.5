@@ -95,7 +95,10 @@ def monteCarlo(xuntergrenze, xobergrenze,yuntergrenze, yobergrenze, werteanzahl,
                 infunction_counter = infunction_counter + 1
     
     #print (infunction_counter,"von" , werteanzahl,"im Wertebreich, Gesamtfläche Bereich:", bereichlaenge*wertebereich)
-    return (infunction_counter/werteanzahl)*bereichlaenge*wertebereich
+    if (obernull):
+        return (infunction_counter/werteanzahl)*bereichlaenge*wertebereich
+    else:
+        return -(infunction_counter/werteanzahl)*bereichlaenge*wertebereich
 
 #aufgabe 2
 def kugel_vol_MC(werteanzahl,dimensionsanzahl):
@@ -156,7 +159,7 @@ column = 3
 matrix = [ [ 0 for i in range(column)] for h in range(row)]
 for x in range(row):
     for y in range(column):
-        matrix[x][y]= uni01()
+        matrix[x][y]= uni01_alt()
         f.write("%7.6f\t" % (matrix[x][y]))
     f.write("\r\n")
 f.close()
@@ -169,7 +172,7 @@ column = 3
 matrix = [ [ 0 for i in range(column)] for h in range(row)]
 for x in range(row):
     for y in range(column):
-        matrix[x][y]= uni01()
+        matrix[x][y]= uni01_alt()
         f.write("%7.6f\t" % (matrix[x][y]))
     f.write("\r\n")
 f.close() 
@@ -189,7 +192,7 @@ f.close()
 
 #monte carlo b
 #werte für echtes vol ungenau und mc volumen falsch!
-dims = [2,4,6,8,10,12,14]#dimensionen
+dims = [2,3,4,5,6,7,8,9,10,12,14]#dimensionen
 points = 100000#anzahl mc punkte
 print("")
 f= open("vol_integral.txt","w+")
@@ -199,5 +202,8 @@ for d in dims:
     print ("Punkteanzahl:",points,"Dimensionen:",d, "Integralwert:",result,"echter Wert:",real_result, "Abweichung:",abs(real_result-result))
     if (result == 0):
         result = 0.001
-    f.write("%d\t%6.5f\n" % (d,real_result/result ))
+    f.write("%d\t%6.5f\n" % (d,1/result ))
 f.close() 
+
+from os import system
+system('gnuplot -persist C:\Backup\splot.p')# nicht der gitpfad weil darin ö ist
