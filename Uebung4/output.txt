@@ -1,0 +1,320 @@
+name= 0
+number = 1 | occurence=172 | deviation in std=1.0119288512538833
+number = 2 | occurence=179 | deviation in std=2.340085468524603
+number = 3 | occurence=178 | deviation in std=2.1503488089145
+number = 4 | occurence=148 | deviation in std=-3.5417509793885835
+number = 5 | occurence=178 | deviation in std=2.1503488089145
+number = 6 | occurence=145 | deviation in std=-4.110960958218892
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   25   35   37   27   26   22
+ 2   35   33   24   27   31   29
+ 3   29   32   40   21   34   22
+ 4   23   31   22   23   24   25
+ 5   33   23   29   29   35   29
+ 6   27   25   25   21   28   18---------------------------------------------
+name= 1
+number = 1 | occurence=175 | deviation in std=1.5811388300841918
+number = 2 | occurence=175 | deviation in std=1.5811388300841918
+number = 3 | occurence=183 | deviation in std=3.099032106965014
+number = 4 | occurence=148 | deviation in std=-3.5417509793885835
+number = 5 | occurence=148 | deviation in std=-3.5417509793885835
+number = 6 | occurence=171 | deviation in std=0.8221921916437805
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   20   98   14   14   15   14
+ 2   30   22   37   24   29   33
+ 3   29   14   34   39   29   37
+ 4   26   15   33   27   22   25
+ 5   27   10   31   24   28   28
+ 6   43   16   34   20   25   33---------------------------------------------
+name= 2
+number = 1 | occurence=166 | deviation in std=-0.1264911064067334
+number = 2 | occurence=163 | deviation in std=-0.6957010852370418
+number = 3 | occurence=167 | deviation in std=0.0632455532033694
+number = 4 | occurence=160 | deviation in std=-1.2649110640673502
+number = 5 | occurence=173 | deviation in std=1.2016655108639862
+number = 6 | occurence=171 | deviation in std=0.8221921916437805
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   36   32   13   28   30   27
+ 2   17   12   89   12   16   17
+ 3   25   32   12   28   33   36
+ 4   27   30   11   29   33   30
+ 5   29   30   24   29   31   30
+ 6   31   27   18   34   30   31---------------------------------------------
+name= 3
+number = 1 | occurence=167 | deviation in std=0.0632455532033694
+number = 2 | occurence=176 | deviation in std=1.7708754896942946
+number = 3 | occurence=184 | deviation in std=3.288768766575117
+number = 4 | occurence=186 | deviation in std=3.6682420857953226
+number = 5 | occurence=136 | deviation in std=-5.818590894709818
+number = 6 | occurence=151 | deviation in std=-2.9725410005582753
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   28   27   33   20   29   29
+ 2   39   37   38   18   15   29
+ 3   11   19   18  103   17   16
+ 4   36   36   38   17   28   31
+ 5   28   25   24   17   21   21
+ 6   25   32   32   11   26   25---------------------------------------------
+name= 4
+number = 1 | occurence=156 | deviation in std=-2.0238577025077613
+number = 2 | occurence=165 | deviation in std=-0.3162277660168362
+number = 3 | occurence=258 | deviation in std=17.329281577722725
+number = 4 | occurence=172 | deviation in std=1.0119288512538833
+number = 5 | occurence=96 | deviation in std=-13.40805727911393
+number = 6 | occurence=153 | deviation in std=-2.59306768133807
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   29   26   42   14   17   28
+ 2   28   29   46   14   19   29
+ 3   23   35   46  112   16   26
+ 4   33   27   53   13   15   30
+ 5   21   22   25    5    8   15
+ 6   22   26   45   14   21   25---------------------------------------------
+name= 5
+number = 1 | occurence=159 | deviation in std=-1.4546477236774529
+number = 2 | occurence=186 | deviation in std=3.6682420857953226
+number = 3 | occurence=156 | deviation in std=-2.0238577025077613
+number = 4 | occurence=167 | deviation in std=0.0632455532033694
+number = 5 | occurence=161 | deviation in std=-1.0751744044572473
+number = 6 | occurence=171 | deviation in std=0.8221921916437805
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   32   29   27   26   14   31
+ 2   35   35   34   36   14   32
+ 3   25   32   21   35   20   23
+ 4   19   11   14   18   84   21
+ 5   22   39   30   26   17   26
+ 6   25   40   30   26   12   38---------------------------------------------
+name= 6
+number = 1 | occurence=169 | deviation in std=0.442718872423575
+number = 2 | occurence=173 | deviation in std=1.2016655108639862
+number = 3 | occurence=153 | deviation in std=-2.59306768133807
+number = 4 | occurence=161 | deviation in std=-1.0751744044572473
+number = 5 | occurence=164 | deviation in std=-0.505964425626939
+number = 6 | occurence=180 | deviation in std=2.5298221281347057
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   29   29   22   38   34   17
+ 2   29   30   32   28   34   20
+ 3   21   28   29   26   27   22
+ 4   36   29   26   24   29   16
+ 5   20   13   14   19   12   86
+ 6   34   44   30   25   28   19---------------------------------------------
+name= 71
+number = 1 | occurence=207 | deviation in std=7.6527119376074815
+number = 2 | occurence=115 | deviation in std=-9.803060746521975
+number = 3 | occurence=201 | deviation in std=6.514291979946864
+number = 4 | occurence=183 | deviation in std=3.099032106965014
+number = 5 | occurence=88 | deviation in std=-14.925950555994751
+number = 6 | occurence=206 | deviation in std=7.462975277997378
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   33   21   37   46   22   48
+ 2   27   11   21   16   17   23
+ 3   49   22   42   44   10   33
+ 4   36   29   34   26   14   44
+ 5   16   13   21   16    5   17
+ 6   45   19   46   35   20   41---------------------------------------------
+name= 10
+number = 1 | occurence=285 | deviation in std=22.4521713871955
+number = 2 | occurence=149 | deviation in std=-3.352014319778481
+number = 3 | occurence=150 | deviation in std=-3.162277660168378
+number = 4 | occurence=137 | deviation in std=-5.628854235099714
+number = 5 | occurence=142 | deviation in std=-4.6801709370492
+number = 6 | occurence=137 | deviation in std=-5.628854235099714
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   87   47   37   35   40   38
+ 2   36   21   25   22   23   22
+ 3   45   20   19   26   26   14
+ 4   37   21   24   17   17   21
+ 5   32   16   22   21   23   28
+ 6   47   24   23   16   13   14---------------------------------------------
+name= 11
+number = 1 | occurence=236 | deviation in std=13.155075066300462
+number = 2 | occurence=150 | deviation in std=-3.162277660168378
+number = 3 | occurence=146 | deviation in std=-3.9212242986087893
+number = 4 | occurence=158 | deviation in std=-1.6443843832875558
+number = 5 | occurence=159 | deviation in std=-1.4546477236774529
+number = 6 | occurence=151 | deviation in std=-2.9725410005582753
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   63   37   32   37   36   31
+ 2   33   23   24   19   29   22
+ 3   38   18   21   29   16   24
+ 4   35   25   22   25   26   24
+ 5   38   23   26   28   24   20
+ 6   29   24   21   20   27   30---------------------------------------------
+name= 12
+number = 1 | occurence=220 | deviation in std=10.119288512538818
+number = 2 | occurence=153 | deviation in std=-2.59306768133807
+number = 3 | occurence=157 | deviation in std=-1.8341210428976586
+number = 4 | occurence=148 | deviation in std=-3.5417509793885835
+number = 5 | occurence=161 | deviation in std=-1.0751744044572473
+number = 6 | occurence=161 | deviation in std=-1.0751744044572473
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   56   33   31   30   39   30
+ 2   34   22   21   22   24   30
+ 3   33   22   31   26   18   27
+ 4   29   24   24   25   26   20
+ 5   40   27   25   18   22   29
+ 6   28   25   25   27   32   24---------------------------------------------
+name= 13
+number = 1 | occurence=199 | deviation in std=6.134818660726659
+number = 2 | occurence=163 | deviation in std=-0.6957010852370418
+number = 3 | occurence=159 | deviation in std=-1.4546477236774529
+number = 4 | occurence=160 | deviation in std=-1.2649110640673502
+number = 5 | occurence=155 | deviation in std=-2.213594362117864
+number = 6 | occurence=164 | deviation in std=-0.505964425626939
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   40   31   30   32   39   27
+ 2   30   31   25   32   23   22
+ 3   27   28   25   24   24   31
+ 4   31   25   23   29   25   26
+ 5   33   27   24   16   24   31
+ 6   38   21   32   27   20   26---------------------------------------------
+name= 80
+number = 1 | occurence=241 | deviation in std=14.103758364350977
+number = 2 | occurence=126 | deviation in std=-7.715957490810846
+number = 3 | occurence=137 | deviation in std=-5.628854235099714
+number = 4 | occurence=130 | deviation in std=-6.957010852370434
+number = 5 | occurence=121 | deviation in std=-8.664640788861359
+number = 6 | occurence=245 | deviation in std=14.862705002791387
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   54   32   29   28   28   69
+ 2   34   20   12   16   14   30
+ 3   28   12   20   15   18   44
+ 4   36   17   19   16   18   24
+ 5   25   22   19   18   13   24
+ 6   64   23   38   36   30   54---------------------------------------------
+name= 20
+number = 1 | occurence=138 | deviation in std=-5.439117575489612
+number = 2 | occurence=281 | deviation in std=21.69322474875509
+number = 3 | occurence=147 | deviation in std=-3.7314876389986864
+number = 4 | occurence=144 | deviation in std=-4.300697617828995
+number = 5 | occurence=145 | deviation in std=-4.110960958218892
+number = 6 | occurence=145 | deviation in std=-4.110960958218892
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   23   41   16   19   21   18
+ 2   45   72   32   39   43   50
+ 3   16   43   20   23   16   28
+ 4   22   37   30   24   16   15
+ 5   20   46   22   15   27   15
+ 6   12   41   27   24   22   19---------------------------------------------
+name= 21
+number = 1 | occurence=138 | deviation in std=-5.439117575489612
+number = 2 | occurence=237 | deviation in std=13.344811725910565
+number = 3 | occurence=177 | deviation in std=1.9606121493043973
+number = 4 | occurence=154 | deviation in std=-2.403331021727967
+number = 5 | occurence=154 | deviation in std=-2.403331021727967
+number = 6 | occurence=140 | deviation in std=-5.059644256269406
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   20   33   31   21   18   15
+ 2   28   54   35   45   33   42
+ 3   23   39   46   24   23   21
+ 4   23   44   19   27   20   21
+ 5   19   35   29   14   31   26
+ 6   25   32   16   23   29   15---------------------------------------------
+name= 22
+number = 1 | occurence=169 | deviation in std=0.442718872423575
+number = 2 | occurence=195 | deviation in std=5.375872022286248
+number = 3 | occurence=156 | deviation in std=-2.0238577025077613
+number = 4 | occurence=164 | deviation in std=-0.505964425626939
+number = 5 | occurence=161 | deviation in std=-1.0751744044572473
+number = 6 | occurence=155 | deviation in std=-2.213594362117864
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   31   37   22   31   26   22
+ 2   36   33   30   36   28   32
+ 3   30   33   25   26   22   20
+ 4   23   27   30   21   27   36
+ 5   21   30   25   24   33   27
+ 6   27   35   24   26   25   18---------------------------------------------
+name= 23
+number = 1 | occurence=141 | deviation in std=-4.869907596659304
+number = 2 | occurence=217 | deviation in std=9.55007853370851
+number = 3 | occurence=174 | deviation in std=1.3914021704740889
+number = 4 | occurence=145 | deviation in std=-4.110960958218892
+number = 5 | occurence=152 | deviation in std=-2.7828043409481724
+number = 6 | occurence=171 | deviation in std=0.8221921916437805
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   19   27   29   22   22   22
+ 2   29   41   49   37   25   35
+ 3   28   31   31   24   31   29
+ 4   16   39   19   23   23   25
+ 5   20   33   26   20   24   29
+ 6   29   46   20   19   27   30---------------------------------------------
+name= 100
+number = 1 | occurence=0 | deviation in std=-31.622776601683796
+number = 2 | occurence=156 | deviation in std=-2.0238577025077613
+number = 3 | occurence=166 | deviation in std=-0.1264911064067334
+number = 4 | occurence=162 | deviation in std=-0.8854377448471445
+number = 5 | occurence=176 | deviation in std=1.7708754896942946
+number = 6 | occurence=340 | deviation in std=32.88768766575115
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1    0    0    0    0    0    0
+ 2    0   28   28   20   25   55
+ 3    0   23   21   33   22   67
+ 4    0   27   22   37   34   41
+ 5    0   23   32   27   37   57
+ 6    0   54   63   45   58  120---------------------------------------------
+name= 90
+number = 1 | occurence=126 | deviation in std=-7.715957490810846
+number = 2 | occurence=125 | deviation in std=-7.905694150420948
+number = 3 | occurence=128 | deviation in std=-7.33648417159064
+number = 4 | occurence=126 | deviation in std=-7.715957490810846
+number = 5 | occurence=128 | deviation in std=-7.33648417159064
+number = 6 | occurence=367 | deviation in std=38.010577475223926
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   13   19   18   14   15   47
+ 2   13   15   18   14   16   49
+ 3   13   14   16   12   18   55
+ 4   14   17   18   14   14   49
+ 5   20   17   12   17   13   49
+ 6   53   43   45   55   52  118---------------------------------------------
+name= 70
+number = 1 | occurence=112 | deviation in std=-10.372270725352285
+number = 2 | occurence=186 | deviation in std=3.6682420857953226
+number = 3 | occurence=302 | deviation in std=25.677694600567246
+number = 4 | occurence=90 | deviation in std=-14.546477236774546
+number = 5 | occurence=206 | deviation in std=7.462975277997378
+number = 6 | occurence=104 | deviation in std=-11.890164002233107
+Neighbourcorrelation
+      1    2    3    4    5    6
+--  ---  ---  ---  ---  ---  ---
+ 1   12   20   32   10   25   13
+ 2   21   33   57   14   38   23
+ 3   40   51   94   31   57   28
+ 4   11   16   22    9   20   12
+ 5   19   47   67   19   37   17
+ 6    9   19   29    7   29   11---------------------------------------------
