@@ -7,6 +7,10 @@
 import sys,socket,time
 import numpy as np
 from tabulate import tabulate
+import sys, os
+import scipy.stats
+
+
 # 
 # if len(sys.argv) != 4:
 #    print  "Usage: %s host port message" % sys.argv[0]
@@ -22,6 +26,7 @@ class Wuerfel():
         self.binoccurence = []
         self.bindeviationfrommean=[]
         self.neighbourcorrelation=None
+        self.entropy = None
     def CalcBinomialStatistics(self):
         self.mean = np.mean(self.wuerfeldata)
         self.std = np.std(self.wuerfeldata)
@@ -33,6 +38,9 @@ class Wuerfel():
         self.neighbourcorrelation = np.zeros((6,6))
         for i in range(1,self.wuerfeldata.size):
             self.neighbourcorrelation[self.wuerfeldata[i-1]-1,self.wuerfeldata[i]-1]+=1
+    def CalcEntropy(self):
+        
+        self.entropy = scipy.stats.entropy(self.binoccurence)
             
         
 def printdata(filename, wuerfeldata):
@@ -41,11 +49,13 @@ def printdata(filename, wuerfeldata):
             f.writelines("name= {}\n".format(w.name))
             for i,zahl in enumerate(w.binoccurence):
                 f.writelines("number = {} | occurence={} | deviation in std={}\n".format(i+1,zahl,w.bindeviationfrommean[i]))
+            f.writelines("Entropy= {}\n".format(w.entropy))
+            
             f.writelines("Neighbourcorrelation\n")
             headers= [1,2,3,4,5,6]
             f.writelines(tabulate(w.neighbourcorrelation,headers,showindex=range(1,7)))
-            f.writelines("\n---------------------------------------------\n")
-        
+            f.writelines("\n\n---------------------------------------------\n")
+            
 
 def ConnectToServer(s):
     host = "server4.physprak.tuwien.ac.at"
@@ -73,8 +83,8 @@ def SendPlusRecive(s,message):
 KENNZAHLEN = [0, 1, 2, 3, 4, 5, 6, 71, 10, 11, 12, 13, 80, 20, 21, 22, 23, 100, 90, 70]
 NUMBEROFTHROWS = 1000
 binmean=NUMBEROFTHROWS/6
-binstd=np.sqrt(binmean*(1-5/6))
-outputfile=r'C:\Users\Raphael\Desktop\UNI\Daten_2.5\Git_Daten\Uebung4\output.txt'
+binstd=np.sqrt(binmean*(1-1/6))
+outputfile= os.path.dirname(sys.argv[0])+ r"/output.txt"
 
  
 # Oeffnen des Sockets
@@ -97,6 +107,7 @@ if __name__== "__main__":
     for w in Wuerfelarray:
         w.CalcBinomialStatistics()
         w.CalcNeighbourcorrelation()
+        w.CalcEntropy()
            
     printdata(outputfile,Wuerfelarray)
     
