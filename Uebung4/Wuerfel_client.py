@@ -7,7 +7,7 @@
 import sys,socket,time
 import numpy as np
 from tabulate import tabulate
-import sys, os
+import  os
 import scipy.stats
 
 
