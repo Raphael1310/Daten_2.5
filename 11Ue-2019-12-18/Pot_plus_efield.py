@@ -11,6 +11,7 @@ class datamatrix():
     def __init__(self):
         self.valuematrix = None
         self.isstatic = None
+        self.numberofplots = 0
     def Readmatrix(self,path):
         if not os.path.exists(path):
             return False
@@ -27,19 +28,28 @@ class datamatrix():
                 
                 if  tmpmatrix[x][y][0]=="*":
                     self.valuematrix[x][y]=tmpmatrix[x][y][1:]
-                    self.isstatic[x][y] = False
+                    self.isstatic[x][y] = True
                 else:
-                        self.valuematrix[x][y]=tmpmatrix[x][y]
-                        self.isstatic[x][y] = True
-                        
+                    self.valuematrix[x][y]=tmpmatrix[x][y]
+                    self.isstatic[x][y] = False
+                    
         return True
     
-    
-    def showmatrix(self):
-         plt.imshow(self.valuematrix)
-         plt.colorbar()
-         plt.show()
- 
+    def calculate_pot(self, Iterations):
+        for i in range(Iterations):
+            for x in range(1,len(self.valuematrix-1)):
+                for y in range(1,len(self.valuematrix[x])-1):
+                    if not self.isstatic[x][y]:
+                        self.valuematrix[x][y]=(self.valuematrix[x-1][y]+self.valuematrix[x+1][y]+self.valuematrix[x][y-1]+self.valuematrix[x][y+1])/4
+            
+    def showmatrix(self,show):
+        dummy= plt.figure(self.numberofplots)        
+        plt.imshow(self.valuematrix, cmap ="jet")
+        plt.colorbar()
+        if show == True:
+            
+            plt.show()
+        self.numberofplots +=1
 
         
 def isfloat(value):
@@ -52,7 +62,12 @@ def isfloat(value):
         
 if __name__== "__main__":
     a = datamatrix()
-    path=r"C:\Users\Raphael\Desktop\UNI\Daten_2.5\Git_Daten\11Ue-2019-12-18\laplace_daten\zyl_1040x1040_400_500_0.dat"
+    path=r"C:\Users\Raphael\Desktop\UNI\Daten_2.5\Git_Daten\11Ue-2019-12-18\laplace_daten\dach_ko60x60.dat"
     if not a.Readmatrix(path):
         print("{} not found".format(path))
-    a.showmatrix()
+    a.showmatrix(False)
+    a.calculate_pot(100)
+    a.showmatrix(False)
+    a.calculate_pot(100)
+    a.showmatrix(True)
+    
