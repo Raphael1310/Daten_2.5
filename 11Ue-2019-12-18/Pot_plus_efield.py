@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import matplotlib.pyplot as plt 
-import os
+import os, sys
 
    
 
@@ -14,7 +14,7 @@ class datamatrix():
         self.isstatic = None
         self.numberofplots = 0
         self.gradientmatrix = None
-        self.
+        self.changevalue = []
     def Readmatrix(self,path):
         if not os.path.exists(path):
             return False
@@ -39,16 +39,25 @@ class datamatrix():
         return True
     
     def calculate_pot(self, Iterations):
+        self.changevalue = np.zeros(Iterations)
         for i in range(Iterations):
+            
             self.valuematrixold = np.copy(self.valuematrix)
             for x in range(1,len(self.valuematrix-1)):
                 for y in range(1,len(self.valuematrix[x])-1):
                     if not self.isstatic[x][y]:
-                        self.valuematrix[x][y]=(self.valuematrix[x-1][y]+self.valuematrix[x+1][y]+self.valuematrix[x][y-1]+self.valuematrix[x][y+1])/4
-            if i%10==0:
-                dummy= np.subtract(self.valuematrix,self.valuematrixold)
-                print("{}   {}".format(i, np.mean(dummy)))
-                
+                        dummynew=(self.valuematrix[x-1][y]+self.valuematrix[x+1][y]+self.valuematrix[x][y-1]+self.valuematrix[x][y+1])/4
+                        dummydifference = dummynew - self.valuematrixold[x][y]  
+                        #relaxion
+                        self.valuematrix[x][y]=self.valuematrixold[x][y] + 1.8*dummydifference
+                        
+                        
+                        self.changevalue[i]+=np.sqrt((self.valuematrix[x][y]-self.valuematrixold[x][y])**2)
+                        
+            print("{}   {}".format(i, self.changevalue[i]))
+        plt.figure(self.numberofplots)
+        plt.plot(self.changevalue)
+        self.numberofplots +=1        
     #def calculate_pot_relax(self, Iterations):
         
             
@@ -82,13 +91,16 @@ def isfloat(value):
     
         
 if __name__== "__main__":
+    
+    
+ 
     a = datamatrix()
-    path=r"C:\Users\Raphael\Desktop\UNI\Git_Daten\11Ue-2019-12-18\laplace_daten\dach_ko60x60.dat"
+    path=os.path.abspath(os.path.dirname(sys.argv[0]))+"\laplace_daten\zyl_1040x1040_400_500_0.dat"
     if not a.Readmatrix(path):
         print("{} not found".format(path))
-        exit()
+        sys.exit()
     a.showmatrix(False,"Pot begin")
-    a.calculate_pot(500,)
+    a.calculate_pot(200,)
     a.showmatrix(False,"Pot 2000 Iterationen")
    # a.calculate_pot(100)
     #a.showmatrix(True, "2000 Iterationen")
